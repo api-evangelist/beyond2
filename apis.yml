@@ -1,23 +1,58 @@
 aid: beyond2
+
 name: Beyond2
-description: 'Beyond2 is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Beyond2 is a classic car restoration and service company specializing in the legendary 2oo2 sedan. Based in the San Francisco Bay Area, they offer consultation, restoration, and parts services for vintage vehicles. Their website showcases services, detailed about information, and a catalog of classic car parts, reflecting a deep commitment to preserving automotive history.'
+
 url: https://raw.githubusercontent.com/api-evangelist/beyond2/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- ClassicCars
+- Restoration
+- Consultation
+- SanFrancisco
+- VintageVehicles
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/beyond2-hosts.yml
+- type: DomainSecurity
+  url: security/beyond2-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/beyond2
+  url: https://beyond2.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine-readable contract found at known endpoints.
+  evidence:
+    - url: https://api.beyond2.com/openapi.json
+      status: error
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
